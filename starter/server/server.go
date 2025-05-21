@@ -34,7 +34,9 @@ func main() {
 	http.Handle("/", http.FileServer(http.Dir(os.Getenv("STATIC_DIR"))))
 	http.HandleFunc("/config", handleConfig)
 	http.HandleFunc("/webhook", handleWebhook)
+	//max
 	http.HandleFunc("/crete-payment-intent", handleCreatePaymentIntent)
+	//max
 
 	log.Println("server running at 0.0.0.0:4242")
 	http.ListenAndServe("0.0.0.0:4242", nil)
@@ -64,6 +66,8 @@ func handleConfig(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
+//max
+
 func handleCreatePaymentIntent(w http.ResponseWriter, r *http.Request) {
 	params := &stripe.PaymentIntentParams{
 		Amount:   stripe.Int64(1099),
@@ -90,6 +94,8 @@ func handleCreatePaymentIntent(w http.ResponseWriter, r *http.Request) {
 		ClientSecret: pi.ClientSecret,
 	})
 }
+
+//max
 
 func handleWebhook(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "POST" {
