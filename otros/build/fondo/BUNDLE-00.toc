@@ -1,0 +1,3 @@
+([('fondo',
+   '/Users/maxaguayo/Documents/Curso_go/otros/dist/fondo',
+   'EXECUTABLE')],)

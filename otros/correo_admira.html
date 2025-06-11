@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notificación de Pago</title>
+<style type="text/css">
+  /* Estilos generales del cuerpo */
+  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+  table { border-collapse: collapse !important; }
+  body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #f4f4f4; }
+
+  /* Estilos para el contenedor principal */
+  .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* Encabezado */
+  .header {
+    background-color: #007bff; /* Azul primario - puedes cambiarlo */
+    padding: 20px 30px;
+    text-align: center;
+  }
+  .header img {
+    max-width: 150px;
+  }
+  .header h1 {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+  }
+
+  /* Contenido principal */
+  .content {
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+  }
+  .content p {
+    margin: 0 0 15px 0;
+  }
+  .payment-details {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+  }
+  .payment-details th, .payment-details td {
+    text-align: left;
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid #dddddd;
+  }
+  .payment-details th {
+    background-color: #f8f8f8;
+    color: #555555;
+    font-weight: bold;
+  }
+  .payment-details td {
+    color: #333333;
+  }
+
+  /* Botón CTA */
+  .button-cta {
+    display: block;
+    width: fit-content; /* Ajusta el ancho al contenido */
+    margin: 30px auto;
+    padding: 15px 30px;
+    background-color: #28a745; /* Verde éxito - puedes cambiarlo */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+  }
+  .button-cta:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+  }
+
+  /* Pie de página */
+  .footer {
+    background-color: #eeeeee;
+    padding: 20px 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #777777;
+  }
+  .footer p {
+    margin: 0 0 5px 0;
+  }
+  .footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 100% !important;
+      border-radius: 0 !important;
+    }
+    .header, .content, .footer {
+      padding: 20px !important;
+    }
+    .header h1 {
+      font-size: 20px !important;
+    }
+    .content {
+      font-size: 15px !important;
+    }
+    .button-cta {
+      font-size: 16px !important;
+      padding: 12px 25px !important;
+    }
+  }
+</style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; background-color: #f4f4f4;">
+  <div style="max-width:600px; margin:0 auto; background-color:#ffffff; border-radius:8px; overflow:hidden;" class="container">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td style="direction:ltr;font-size:0px;padding:0;text-align:center;">
+            <div style="background-color:#007bff; padding:20px 30px; text-align:center;" class="header">
+              <h1 style="color:#ffffff; font-family:Arial, sans-serif; font-size:24px; font-weight:bold; margin:10px 0 0 0;">
+                Notificación de Pago
+              </h1>
+            </div>
+
+            <div style="padding:30px; font-family:Arial, sans-serif; font-size:16px; line-height:1.6; color:#333333;" class="content">
+              <p style="margin:0 0 15px 0;">Hola {{_GEN_1748364912087__name}},</p>
+              <p style="margin:0 0 15px 0;">
+                Te informamos que tienes un pago pendiente o que hemos recibido un pago. Por favor, revisa los detalles a continuación:
+              </p>
+
+              <table class="payment-details" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse; width:100%; margin-bottom:20px; border:1px solid #dddddd;">
+                <tbody>
+                  <tr>
+                    <th style="text-align:left; padding:12px; font-family:Arial, sans-serif; font-size:15px; border-bottom:1px solid #dddddd; background-color:#f8f8f8; color:#555555; font-weight:bold;">Concepto</th>
+                    <td style="text-align:left; padding:12px; font-family:Arial, sans-serif; font-size:15px; border-bottom:1px solid #dddddd; color:#333333;"pago dinametra"</td>
+                  </tr>
+                  <tr>
+                    <th style="text-align:left; padding:12px; font-family:Arial, sans-serif; font-size:15px; border-bottom:1px solid #dddddd; background-color:#f8f8f8; color:#555555; font-weight:bold;">Monto</th>
+                    <td style="text-align:left; padding:12px; font-family:Arial, sans-serif; font-size:15px; border-bottom:1px solid #dddddd; color:#333333;">/</td>
+                  </tr>
+                  <tr>
+                    <th style="text-align:left; padding:12px; font-family:Arial, sans-serif; font-size:15px; border-bottom:1px solid #dddddd; background-color:#f8f8f8; color:#555555; font-weight:bold;">Fecha de Vencimiento</th>
+                    <td style="text-align:left; padding:12px; font-family:Arial, sans-serif; font-size:15px; border-bottom:1px solid #dddddd; color:#333333;">09/10/2000</td>
+                  </tr>
+                  </tbody>
+              </table>
+
+              <p style="margin:0 0 25px 0;">Para completar tu pago o ver más detalles, por favor haz clic en el siguiente botón:</p>
+
+              <a href="{{_GEN_1748625238691__url}}" target="_blank" class="button-cta" style="display:block; width:fit-content; margin:30px auto; padding:15px 30px; background-color:#28a745; color:#ffffff; font-family:Arial, sans-serif; font-size:18px; font-weight:bold; text-align:center; text-decoration:none; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;">
+                Realizar Pago Ahora
+              </a>
+              <p style="margin:0 0 15px 0;">Si ya has realizado este pago, por favor ignora este mensaje. Si tienes alguna pregunta, no dudes en contactarnos.</p>
+              <p style="margin:0;">¡Gracias!</p>
+            </div>
+
+            <div style="background-color:#eeeeee; padding:20px 30px; text-align:center; font-family:Arial, sans-serif; font-size:12px; color:#777777;" class="footer">
+              <p style="margin:0 0 5px 0;">Tu Empresa S.A. de C.V.</p>
+              <p style="margin:0 0 5px 0;">Calle Falsa 123, Colonia Centro, Ciudad, País</p>
+              <p style="margin:0 0 5px 0;"><a href="mailto:soporte@tuempresa.com" style="color:#007bff; text-decoration:none;">soporte@tuempresa.com</a> | <a href="https://www.tuempresa.com" target="_blank" style="color:#007bff; text-decoration:none;">www.tuempresa.com</a></p>
+              <p style="margin:0;">&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
